@@ -1,0 +1,232 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --cinza-transparente: rgba(192, 192, 192, 0.14);
+    --cinza-escuro: #727272;
+    --transparente-forte: rgba(192, 192, 192, 0.24);
+    --botao-azul: #167BF7;
+    --azul-secundario: #4497ff;
+    --azul-forte: #1262c5;
+    --cor-de-fundo: #00030C;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: 'Inter', sans-serif;
+    line-height: 2em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.principal {
+    background-image: url("imgs/Background.png");
+
+}
+
+main {
+    display: grid;
+    grid-template-rows: 1fr repeat(5, auto);
+    margin-left: 8em;
+    gap: 10em;
+}
+
+.container-botao {
+    background-color: var(--botao-azul);
+    padding: 16px;
+    border-radius: 8px;
+    width: 600px;
+    color: var(--branco-principal);
+    display: block;
+}
+
+.container__botao--transparente {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__botao--pequeno {
+    width: fit-content;
+}
+.titulo {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+.descricao {
+    color: var(--cinza-secundario);
+}
+
+.container {
+    grid-area: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+
+.container div {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(5, auto);
+    gap: 2em;
+}
+
+.container h1 {
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+.assista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 100px;
+    margin-right: 8em;
+}
+
+.assista-esquerda {
+    justify-self: center;
+}
+.assista-direita {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    justify-self: start;
+
+}
+
+.assine {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 100px;
+    margin-right: 8em;
+}
+
+.assine-esquerda {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    justify-self: end;
+}
+
+.assine-direita {
+    justify-self: center;
+}
+
+.baixe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 100px;
+    margin-right: 8em;
+}
+
+.baixe-esquerda {
+    justify-self: center;
+}
+
+.baixe-direita {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    justify-content: start;
+}
+
+.dispositivos {
+    margin-right: 8em;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+        "a"
+        "b";
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 60px;
+}
+
+.dispositivos-blocos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.dispositivos-tv {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+.dispositivos-computador {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+.dispositivos-celular {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+.rodape {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d";
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.rodape img {
+    grid-area: a;
+}
+
+.rodape p {
+    font-size: 0.9em;
+}
+
+.rodape ul {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    margin: 20px 0;
+    grid-column-gap: 15px;
+}
+
+.container-botao:hover {
+    background-color: var(--azul-secundario);
+    font-weight: 600;
+}
+
+.container__botao--transparentee:hover {
+    background-color: var(--cinza-transparente);
+}
+
+.container-botao:active {
+    background-color: var(--azul-forte);
+}
+
+.container__botao--transparentee:active {
+    background-color: var(--transparente-forte);
+}
+
+.rodape-lista a:hover {
+    color: var(--cinza-secundario);
+}
+
+.rodape-lista a:active {
+    color: var(--cinza-escuro);
+}
